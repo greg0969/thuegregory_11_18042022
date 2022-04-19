@@ -1,0 +1,13 @@
+.logo-kasa {
+    margin: 2.2em 5.6em;
+}
+
+@media screen and (min-width: 250px) and (max-width: 540px)
+{ 
+    .logo-kasa {
+        width: 8em;
+        height: 2.6em;
+        margin: 1.1em ;
+    }
+}
+    
