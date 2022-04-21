@@ -3,11 +3,12 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
+    .logo-footer {
+        color: white;
+    }
 }
 
-.logo-footer {
-    color: white;
-}
+
 
 @media screen and (min-width: 250px) and (max-width: 540px)
 { 

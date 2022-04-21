@@ -1,10 +1,11 @@
 import banner from "../assets/background.svg"
-import "../styles/Banner.css"
+import "../styles/index.scss";
 
 function Banner() {
     return (
         <div className="banner">
             <img src={banner} alt='Banner' className='banner-kasa' />
+            <h1>Chez vous, partout et ailleurs</h1>
         </div>   
     )
 }

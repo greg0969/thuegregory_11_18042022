@@ -1,0 +1,43 @@
+.banner {
+    height: 12.4em;
+    margin-bottom: 5.5em;
+    display: flex;
+    justify-content: center;
+    .banner-kasa {
+        border-radius: 25px;
+        filter: brightness(0.75);
+        object-fit: cover;
+        position: absolute;
+    }
+    h1 {
+        z-index: 1;
+        font-size: 48px;
+        font-weight: 500;
+        color: white;
+        margin: auto;
+    }
+    
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 540px)
+{
+    
+    .banner {
+        height: 6.2em;
+        margin-bottom: 1.2em;
+        justify-content: initial;
+        .banner-kasa {
+            width: 18.5em;
+            height: 6.2em;
+            border-radius: 10px;
+            margin: 0 1.2em;
+        }
+        h1 {
+            font-size: 24px;
+            width: 7em;
+            margin: 1em 1.5em;
+        }
+    
+    }
+}

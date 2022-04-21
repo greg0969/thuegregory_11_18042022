@@ -1,0 +1,48 @@
+
+nav {
+    align-self: center;
+    margin-right: 4em;
+    ul {
+        display: flex;
+        .nav-active {
+            position: relative;
+            text-decoration: underline;
+            color: #FF6060;
+            
+        }
+        a {
+            text-decoration: none;
+            .link {
+                list-style-type: none;
+                color: #FF6060;
+                font-size: 24px;
+                width: 5em;
+              
+            }
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 250px) and (max-width: 540px)
+{
+
+    nav {
+        margin-right: 1em;
+        ul {
+            margin: 0;
+            padding: 0;
+            a {
+                .link {
+                    font-size: 12px;
+                    
+                }
+            }
+            
+        }
+    }
+    
+
+    
+}

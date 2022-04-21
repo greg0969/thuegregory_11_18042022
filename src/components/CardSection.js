@@ -1,11 +1,13 @@
-import "../styles/CardSection.css"
+import "../styles/index.scss";
 
-function CardSection() {
+function CardSection ({ logement }) {
+
     return (
         <div className='card-container'>
             <figure className='card'>
+                <img className="card__img" src={logement.cover} alt={logement.title} />
                 <figcaption>
-                    <h2 className='title-card'>Titre de la <br />location</h2>
+                    <h2 className='card__title'>{logement.title}</h2>   
                 </figcaption> 
             </figure>
             

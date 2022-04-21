@@ -1,0 +1,52 @@
+
+
+.sectionErreur {
+    display: flex;
+    flex-direction: column;
+    margin: 6.8em 0;
+    text-align: center;
+    &__title{
+        font-size: 288px;
+        font-weight: 700;
+    }
+    &__message {
+        margin-bottom: 10.1em;
+    }
+    &__index {
+        text-decoration: underline;
+    }
+    &__title, p {
+        color: #FF6060;
+    }
+    
+}
+
+@media screen and (min-width: 250px) and (max-width: 540px)
+{ 
+    .sectionErreur {
+        display: flex;
+        flex-direction: column;
+        margin: 6.8em 0;
+        text-align: center;
+        &__title{
+            font-size: 96px;
+            font-weight: 700;
+            width: auto;
+            margin: auto;
+        }
+        &__message {
+            margin-bottom: 10.1em;
+            font-size: 18px;
+        }
+        &__index {
+            text-decoration: underline;
+            font-size: 14px;
+        }
+        &__title, p {
+            color: #FF6060;
+        }
+        
+    }
+    
+}
+   

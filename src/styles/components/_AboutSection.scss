@@ -1,0 +1,31 @@
+.about-section {
+    width: 71%;
+    margin: auto;
+    color: white;
+    .title {
+        background-color: #FF6060;
+        padding: 0.7em 1em;
+        margin: auto;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        &::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f078";
+        }
+    }
+    
+    div {
+        background-color: #F6F6F6;
+        border-radius: 5px;
+        p {
+            width: 97%;
+            color: #FF6060;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 1.1em 1em;
+        }
+    }
+    
+}
