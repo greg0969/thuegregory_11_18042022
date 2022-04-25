@@ -1,5 +1,5 @@
+import AboutBanner from "../components/AboutBanner"
 import AboutSection from "../components/AboutSection"
-import Banner from "../components/Banner"
 import Logo from "../components/Logo"
 import Nav from "../components/Nav"
 
@@ -12,7 +12,7 @@ function About() {
                 </div>
                 <Nav />
             </header>
-			<Banner />
+			<AboutBanner />
 			<AboutSection />
 		</div>
 	)

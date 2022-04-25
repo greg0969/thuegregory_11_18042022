@@ -1,8 +1,10 @@
 import Logo from "../components/Logo"
 import Nav from "../components/Nav"
+import DetailsLogement from "../components/DetailsLogement"
 import "../styles/index.scss"
 
-function FicheLogement() {
+function FicheLogement({ficheLogement}) {
+
 	return (
 		<div className='home-kasa'>
 			<header>
@@ -11,10 +13,11 @@ function FicheLogement() {
                 </div>
                 <Nav />
             </header>
-			
+            <DetailsLogement detailsLogement={ficheLogement} />
+            
+              
 		</div>
 	)
 }
-
 
 export default FicheLogement
