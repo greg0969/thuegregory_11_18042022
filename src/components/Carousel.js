@@ -1,11 +1,14 @@
-import { Slide } from 'reac-slideshow-image'
+// import { Slide } from 'reac-slideshow-image'
+import "../styles/index.scss";
+
 function Carousel ({ pics }) {
 
     return (
         <div className='carousel'>
-            <Slide >
+            {/* <Slide >
                 <img src={pics.pictures} alt="oui" />
-            </Slide>
+            </Slide> */}
+            {/* <img src={pics.cover} alt={pics.title} /> */}
          </div>
         
     ) 

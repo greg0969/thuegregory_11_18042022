@@ -1,39 +1,23 @@
-import React,{useState,useEffect} from 'react';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import About from "./pages/About";
+import Erreur404 from "./pages/Erreur404";
+import FicheLogement from "./pages/FicheLogement";
+import Home from "./pages/Home";
 import "./styles/index.scss";
-import Router from "./Router";
 
 function App() {
   
-
-  const [data,setData]=useState([]);
-
-  const getData=()=>{
-      fetch('./data.json'
-      ,{
-        headers : { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }
-      }
-      )
-        .then(function(response){
-          //console.log(response)
-          return response.json();
-        })
-        .then(function(myJson) {
-          //console.log(myJson);
-          setData(myJson)
-        });
-    }
-    useEffect(()=>{
-      getData()
-      
-    },[])
-    
-
   return (
-    <Router data={data}/> 
+    <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/logement/:id" element={<FicheLogement />} /> 
+        <Route path="*" element={<Erreur404 />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+

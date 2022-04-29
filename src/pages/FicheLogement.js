@@ -1,9 +1,10 @@
 import Logo from "../components/Logo"
 import Nav from "../components/Nav"
 import DetailsLogement from "../components/DetailsLogement"
+import React,{useState,useEffect} from 'react';
 import "../styles/index.scss"
 
-function FicheLogement({ficheLogement}) {
+function FicheLogement() {
 
 	return (
 		<div className='home-kasa'>
@@ -13,11 +14,15 @@ function FicheLogement({ficheLogement}) {
                 </div>
                 <Nav />
             </header>
-            <DetailsLogement detailsLogement={ficheLogement} />
             
-              
+            <DetailsLogement />
+            
+            
+        
 		</div>
 	)
 }
 
 export default FicheLogement
+
+

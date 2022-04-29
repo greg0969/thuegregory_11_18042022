@@ -1,0 +1,25 @@
+.details-logement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__left {
+        width: 67%;
+    }
+    section {
+        display: flex;
+        color: #FF6060;
+    }
+    .haut {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 2em;
+    }
+    .bas {
+        width: 88%;
+    }
+    .avatar-logement {
+        width: 3.6em;
+        border-radius: 100%;
+    }
+}
+

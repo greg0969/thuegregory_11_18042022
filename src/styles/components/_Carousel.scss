@@ -1,0 +1,10 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+    img {
+        width: 68.9em;
+        height: 23.1em;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+}
