@@ -1,4 +1,4 @@
-function Tag () {
+function Tag ({ details }) {
 
     return (
         <div className='tags-logement'>

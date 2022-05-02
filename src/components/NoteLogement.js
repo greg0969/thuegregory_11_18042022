@@ -1,4 +1,4 @@
-function NoteLogement () {
+function NoteLogement ({ details }) {
 
     return (
         <div className='note-logement'>

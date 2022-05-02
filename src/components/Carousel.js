@@ -1,20 +1,18 @@
-// import { Slide } from 'reac-slideshow-image'
 import "../styles/index.scss";
 
-function Carousel ({ pics }) {
-
+function Carousel( {details} ) {
+    
     return (
-        <div className='carousel'>
-            {/* <Slide >
-                <img src={pics.pictures} alt="oui" />
-            </Slide> */}
-            {/* <img src={pics.cover} alt={pics.title} /> */}
-         </div>
-        
-    ) 
-
+        <div>
+            <div className="container">
+                <div className="leftArrow">❰</div>
+                <div className="displayFrame">
+                    <h1>{details.title}</h1>
+                </div>
+                <div className="rightArrow">❱</div>
+            </div>
+        </div>
+    )
 }
 
-export default Carousel
-
-
+export default Carousel;
