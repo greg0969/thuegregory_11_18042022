@@ -7,7 +7,6 @@ function Carousel( {details} ) {
             <div className="container">
                 <div className="leftArrow">❰</div>
                 <div className="displayFrame">
-                    <h1>{details.title}</h1>
                 </div>
                 <div className="rightArrow">❱</div>
             </div>

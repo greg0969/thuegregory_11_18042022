@@ -1,4 +1,4 @@
-import banner from "../assets/background.svg"
+import banner from "../assets/background.png"
 import "../styles/index.scss";
 
 function Banner() {

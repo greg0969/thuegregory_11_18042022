@@ -1,7 +1,8 @@
-import AboutBanner from "../components/AboutBanner"
-import AboutSection from "../components/AboutSection"
+import aboutBackground from "../assets/background-about.png";
+import Dropdown from "../components/Dropdown";
 import Logo from "../components/Logo"
 import Nav from "../components/Nav"
+import aboutData from "../components/dataAbout";
 
 function About() {
 	return (
@@ -12,8 +13,15 @@ function About() {
                 </div>
                 <Nav />
             </header>
-			<AboutBanner />
-			<AboutSection />
+			<div className="banner">
+            	<img src={aboutBackground} alt='about' className="banner-kasa" />
+        	</div> 
+			<div className="about-section">
+				{aboutData.map((data) => (
+					<Dropdown key={data.title} title={data.title} desc={data.description} />
+				))}
+           	 	 
+        	</div>
 		</div>
 	)
 }
