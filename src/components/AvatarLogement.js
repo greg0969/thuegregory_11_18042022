@@ -2,7 +2,7 @@ function AvatarLogement ({ details }) {
 
     return (
         <div className='avatar-logement'>
-            <p>{details.host.name}</p>
+            <h2>{details.host.name}</h2>
             <img src={details.host.picture} alt={details.host.name} />
         </div>
         

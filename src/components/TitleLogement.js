@@ -1,8 +1,8 @@
 function TitleLogement ({ details }) {
-    console.log(details.title)
     return (
         <div className='title-logement'>
-            <h2>{details.title}</h2>
+            <h1>{details.title}</h1>
+            <h2>{details.location}</h2>
         </div>
         
     ) 

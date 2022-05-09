@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import AvatarLogement from "./AvatarLogement";
 import Carousel from "./Carousel";
@@ -9,8 +9,7 @@ import Dropdown from "../components/Dropdown";
 
 function DetailsLogement() {
 
-
-  const [selectedLogement, setSelectedLogement] = useState();
+  const [selectedLogement, setSelectedLogement] = useState("");
 
   const { id } = useParams();
 
@@ -37,23 +36,30 @@ function DetailsLogement() {
   useEffect(() => {
     getData()
 
-  }, [])
+  }, [selectedLogement])
+
+  if (selectedLogement === undefined) {
+    return (
+      <Navigate to="*" />
+    )
+  }
 
   return (
+    
     <div className="details-logement">
-      {selectedLogement && <div><Carousel details={selectedLogement} /></div>}
-      <section className="haut">
+      {selectedLogement && <Carousel carouselPics={selectedLogement.pictures} />}
+      <section className="presentation">
         <div className="details-logement__left">
           {selectedLogement && <TitleLogement details={selectedLogement} />}
           {selectedLogement && <Tag details={selectedLogement} />}
         </div>
         <div className="details-logement__right">
           {selectedLogement && <AvatarLogement details={selectedLogement} />}
-          {selectedLogement && <NoteLogement details={selectedLogement} />}
+          {selectedLogement && <NoteLogement rate={selectedLogement.rating} />}
         </div>
       </section>
 
-      <section className="bas">
+      <section className="collapse">
         {selectedLogement && <Dropdown title="Description" desc={selectedLogement.description} />}
         {selectedLogement && <Dropdown title="Equipement" desc={selectedLogement.equipments} />}
       </section>

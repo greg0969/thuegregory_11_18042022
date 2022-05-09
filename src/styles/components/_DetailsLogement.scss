@@ -1,26 +1,145 @@
+h1,h2 {
+    font-weight: 500;
+}
+
 .details-logement {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    &__left {
-        width: 67%;
-    }
     section {
         display: flex;
         color: #FF6060;
     }
-    .haut {
-        width: 100%;
-        justify-content: center;
+    .presentation {
+        width: 86%;
+        justify-content: space-between;
         margin-bottom: 2em;
+        .title-logement {
+            font-size: 36px;         
+            h1 {
+                margin: 0;
+            }
+            h2 {
+                font-size: 18px;
+            }
+        }
+        .tags-logement {
+            width: 50%;
+            ul {
+                display: flex;
+                padding: 0;
+                justify-content: space-between;
+                li {
+                    list-style-type: none;
+                    color: white;
+                    font-size: 14px;
+                    background-color: #FF6060;
+                    border-radius: 10px;
+                    padding: 0.25em 1.02em;
+                }
+            }
+            
+        }
     }
-    .bas {
+    .collapse {
+        margin-top: 1em;
         width: 88%;
-        justify-content: space-around;
+        justify-content: space-between;
+        .dropdownContainer {
+            width: 46%;
+            .title {
+                color: white;
+            }
+            .dropdown {
+                margin-top: 2em;
+            }
+        }
     }
     .avatar-logement {
-        width: 3.6em;
-        border-radius: 100%;
+        margin-top: 1em;
+        display: flex;
+        h2 {
+            align-self: center;
+            margin-right: 1em;
+            width: 5em;
+            text-align: right;
+        }
+        img {
+            border-radius: 100%;
+        }
+    }
+    .note-logement {
+        display: flex;
+        .empty::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f005";
+            color: #E3E3E3;
+        }
+        .fill::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f005";
+            color: #FF6060;
+        }
     }
 }
 
+@media screen and (min-width: 250px) and (max-width: 540px)
+{
+    
+    .details-logement {
+        .presentation {
+            flex-direction: column;
+            .title-logement {
+                font-size: 18px;         
+                h2 {
+                    font-size: 14px;
+                }
+            }
+            .tags-logement {
+                width: 50%;
+                ul {
+                    li {
+                        font-size: 12px;
+                        
+                    }
+                }
+                
+            }
+        }
+        .collapse {
+            flex-direction: column;
+            .dropdownContainer {
+                width: 100%;
+                .title {
+                    color: white;
+                }
+                .dropdown {
+                    margin-top: 2em;
+                }
+            }
+        }
+        &__right {
+            display: flex;
+            flex-direction: row-reverse;
+            .avatar-logement {
+            
+                h2 {
+                    
+                    font-size: 12px;
+                    
+                }
+                img {
+                    width: 3.55em;
+                }
+            }
+            .note-logement {
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+    }
+    
+}

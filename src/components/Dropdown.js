@@ -3,19 +3,17 @@ import React, { useState } from 'react';
 
 function Dropdown(props) {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState();
 
     const toggling = () => setIsOpen(!isOpen);
 
     const onOptionClicked = value => () => {
-        setSelectedOption(value);
         setIsOpen(false);
     };
     return (
         <div className="dropdownContainer">
             
             <div className="title" onClick={toggling}>
-                {selectedOption || props.title}
+                {props.title}
             </div>
             {
                 isOpen && (

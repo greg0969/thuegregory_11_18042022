@@ -2,32 +2,30 @@
     width: 71%;
     margin: auto;
     color: white;
-    .dropdownContainer {
-        margin-bottom: 1em;
-        .title {
-            background-color: #FF6060;
-            padding: 0.7em 1em;
-            margin: auto;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            &::after {
-                font-family: "Font Awesome 5 Free"; 
-                font-weight: 900; 
-                content: "\f078";
-            }
-        }
-        .dropdown {
-            background-color: #F6F6F6;
-            border-radius: 5px;
-            color: #FF6060;
-            .listItem {
-                margin-top: 1em;
-            }   
+        
+}
+
+.dropdownContainer {
+    margin-bottom: 1em;
+    .title {
+        background-color: #FF6060;
+        padding: 0.7em 1em;
+        margin: auto;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        &::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f078";
         }
     }
-    
-    
-    
-    
+    .dropdown {
+        background-color: #F6F6F6;
+        border-radius: 5px;
+        color: #FF6060;
+        .listItem {
+            margin-top: 1em;
+        }   
+    }
 }

@@ -35,12 +35,10 @@ function CardSection() {
       {data.map((ficheLogement) => (
         <div key={ficheLogement.id} className="card-container">
           <Link key={ficheLogement.id} to={`/logement/${ficheLogement.id}`} >
-            <figure className="card">
+            <div className="card">
                 <img className="card__img" src={ficheLogement.cover} alt={ficheLogement.title} />
-              <figcaption>
                 <h2 className="card__title">{ficheLogement.title}</h2>
-              </figcaption>
-            </figure>
+            </div>
           </Link>
         </div>
       ))}

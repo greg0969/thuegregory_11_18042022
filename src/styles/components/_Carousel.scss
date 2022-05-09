@@ -1,13 +1,4 @@
-// .carousel {
-//     display: flex;
-//     justify-content: center;
-//     img {
-//         width: 68.9em;
-//         height: 23.1em;
-//         object-fit: cover;
-//         border-radius: 25px;
-//     }
-// }
+
 
 .displayFrame {
     touch-action: none;
@@ -19,9 +10,9 @@
     background-color: #eaebec;
     overflow-y: hidden;
     overflow-x: hidden;
-    white-space: nowrap;
     z-index: 1;
     caret-color: transparent;
+    display: flex;
 }
 
 .lisplayFrame::-webkit-scrollbar {
@@ -73,4 +64,31 @@
     overflow: hidden;
     width: 100%;
     align-items: center;
+}
+
+.CarouselItem {
+    touch-action: none;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: .1%;
+    transition: all 500ms linear;
+}
+
+.CarouselItem img {
+    height: 100%;
+    background-color: none;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 540px)
+{
+    
+    .container {
+        width: 80%;
+    }
+    
 }
