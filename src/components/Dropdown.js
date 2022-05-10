@@ -1,10 +1,13 @@
 import "../styles/index.scss";
 import React, { useState } from 'react';
 
+
 function Dropdown(props) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggling = () => setIsOpen(!isOpen);
+    
+    // console.log(props.desc.constructor === Array)
 
     return (
         <div className="dropdownContainer">
@@ -18,7 +21,8 @@ function Dropdown(props) {
                         <div className="dropdownList">
 
                             <div className="listItem" >
-                                {props.desc}
+                                { props.desc.constructor === Array === true && <ul>{props.desc.map((item) => (<li key={item}>{item}</li>))}</ul>}
+                                { props.desc.constructor === Array === false && props.desc}
                             </div>
 
                         </div>
