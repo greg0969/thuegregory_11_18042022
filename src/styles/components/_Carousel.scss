@@ -19,24 +19,30 @@
     display: none;
 }
 
+.rightArrow,.leftArrow {
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .leftArrow {
     position: absolute;
     left: 1%;
     padding-left: 2px;
     padding-right: 2px;
     font-size: xx-large;
-    color: #aabbcc;
     user-select: none;
     z-index: 2;
+    &::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f053";
+        color: white;
+    }
 }
 
-.leftArrow:hover {
-    color: #bbccdd;
-}
 
-.leftArrow:active {
-    color: #206ebd;
-}
 
 .rightArrow {
     position: absolute;
@@ -44,17 +50,14 @@
     padding-left: 2px;
     padding-right: 2px;
     font-size: xx-large;
-    color: #aabbcc;
     user-select: none;
     z-index: 2;
-}
-
-.rightArrow:hover {
-    color: #bbccdd
-}
-
-.rightArrow:active {
-    color: #206ebd
+    &::after {
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        content: "\f054";
+        color: white;
+    }
 }
 
 .container {
@@ -86,9 +89,11 @@
 
 @media screen and (min-width: 250px) and (max-width: 540px)
 {
-    
-    .container {
-        width: 80%;
+    .carousel {
+        width: 90%;
+        .displayFrame {
+            height: 14.2em;
+        }
     }
     
 }

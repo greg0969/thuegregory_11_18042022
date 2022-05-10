@@ -21,7 +21,7 @@ function Dropdown(props) {
                         <div className="dropdownList">
 
                             <div className="listItem" >
-                                { props.desc.constructor === Array === true && <ul>{props.desc.map((item) => (<li key={item}>{item}</li>))}</ul>}
+                                { props.desc.constructor === Array === true && <ul>{props.desc.map((item) => (<li key={item} className="itemEquipement">{item}</li>))}</ul>}
                                 { props.desc.constructor === Array === false && props.desc}
                             </div>
 

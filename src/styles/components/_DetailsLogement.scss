@@ -6,6 +6,7 @@ h1,h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
     section {
         display: flex;
         color: #FF6060;
@@ -37,8 +38,8 @@ h1,h2 {
                     background-color: #FF6060;
                     border-radius: 10px;
                     padding: 0.25em 1.02em;
-                    margin: auto;
-                    margin-left: 0;
+                    margin-right: 1em;
+                    
                 }
             }
             
@@ -52,9 +53,19 @@ h1,h2 {
             width: 46%;
             .title {
                 color: white;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             .dropdown {
                 margin-top: 2em;
+                ul {
+                    padding: 0 1em;
+                    .itemEquipement {
+                        list-style-type: none;
+                    }
+                }
+                
             }
         }
     }
@@ -101,18 +112,21 @@ h1,h2 {
     .details-logement {
         .presentation {
             flex-direction: column;
+            margin: 0;
             .title-logement {
-                font-size: 18px;         
+                h1 {
+                    font-size: 18px;         
+                }
                 h2 {
                     font-size: 14px;
                 }
             }
             .tags-logement {
-                width: 50%;
                 ul {
+                    margin-bottom: 0;
                     li {
-                        font-size: 12px;
-                        
+                        border-radius: 5px;
+                        font-size: 10px;
                     }
                 }
                 
@@ -124,13 +138,23 @@ h1,h2 {
                 width: 100%;
                 .title {
                     color: white;
+                    font-size: 13px;
+                    border-radius: 5px;
+                    &::after {
+                        align-self: flex-end;
+                    }
                 }
                 .dropdown {
-                    margin-top: 2em;
+                   margin-top: 0;
+                    .listItem {
+                        margin-top: 1.42em;
+                        font-size: 12px;
+                    }
                 }
             }
         }
         &__right {
+            justify-content: space-between;
             display: flex;
             flex-direction: row-reverse;
             .avatar-logement {
@@ -138,15 +162,16 @@ h1,h2 {
                 h2 {
                     
                     font-size: 12px;
-                    
+                    margin-top: 0;
                 }
                 img {
-                    width: 3.55em;
+                    width: 1.78em;
                 }
             }
             .note-logement {
                 display: flex;
                 align-items: center;
+                font-size: 0.7em;
             }
         }
         

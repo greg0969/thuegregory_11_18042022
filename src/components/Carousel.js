@@ -41,14 +41,14 @@ function Carousel( {carouselPics} ) {
     }
 
     return (
-        <div>
+        <div className="carousel">
             <div className="container">
-                {carouselPics.length >= 2 && <div className="leftArrow" onClick={prevClickHandler}>❰</div>}
+                {carouselPics.length >= 2 && <div className="leftArrow" onClick={prevClickHandler}></div>}
                 <div className="displayFrame">
                     <div className="CarouselItem" ><img src={carouselPics[sliderPosition]} alt=""/></div>
 
                 </div>
-                {carouselPics.length >= 2 && <div className="rightArrow" onClick={nextClickHandler}>❱</div>}
+                {carouselPics.length >= 2 && <div className="rightArrow" onClick={nextClickHandler}></div>}
             </div>
         </div>
     )
