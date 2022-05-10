@@ -6,9 +6,6 @@ function Dropdown(props) {
 
     const toggling = () => setIsOpen(!isOpen);
 
-    const onOptionClicked = value => () => {
-        setIsOpen(false);
-    };
     return (
         <div className="dropdownContainer">
             
@@ -20,7 +17,7 @@ function Dropdown(props) {
                     <div className="dropdown">
                         <div className="dropdownList">
 
-                            <div className="listItem" onClick={onOptionClicked(props)}>
+                            <div className="listItem" >
                                 {props.desc}
                             </div>
 
