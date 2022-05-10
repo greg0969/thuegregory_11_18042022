@@ -11,23 +11,33 @@ function Carousel( {carouselPics} ) {
         if (newPosition > 0) {
             newPosition = newPosition - 1 ;
         }
+
+        if (sliderPosition === 0) {
+            newPosition = carouselPics.length -1   
+        }
         setSliderPosition(newPosition);
     }
     
     const next = () => {
         let newPosition = sliderPosition ;
+        
         if (newPosition < carouselPics.length -1) {
             newPosition = newPosition + 1 ;
         }
+        
+        if (sliderPosition === carouselPics.length - 1) {
+            newPosition = 0   
+        }
         setSliderPosition(newPosition)
     }
-
+    
     const prevClickHandler = () => {
         prev();
     }
 
     const nextClickHandler = () => {
         next();
+        
     }
 
     return (
