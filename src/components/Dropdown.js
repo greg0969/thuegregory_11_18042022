@@ -7,14 +7,11 @@ function Dropdown(props) {
 
     const toggling = () => setIsOpen(!isOpen);
     
-    // console.log(props.desc.constructor === Array)
-
     return (
         <div className="dropdownContainer">
             
-            <div className="title" onClick={toggling}>
-                {props.title}
-            </div>
+            { isOpen === false &&<div className="title inactive" onClick={toggling}>{props.title}</div>}
+            { isOpen === true &&<div className="title active" onClick={toggling}>{props.title}</div>}
             {
                 isOpen && (
                     <div className="dropdown">

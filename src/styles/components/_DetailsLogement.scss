@@ -45,30 +45,7 @@ h1,h2 {
             
         }
     }
-    .collapse {
-        margin-top: 1em;
-        width: 88%;
-        justify-content: space-between;
-        .dropdownContainer {
-            width: 46%;
-            .title {
-                color: white;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            .dropdown {
-                margin-top: 2em;
-                ul {
-                    padding: 0 1em;
-                    .itemEquipement {
-                        list-style-type: none;
-                    }
-                }
-                
-            }
-        }
-    }
+    
     .avatar-logement {
         margin-top: 1em;
         display: flex;

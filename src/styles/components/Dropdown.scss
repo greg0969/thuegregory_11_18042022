@@ -1,0 +1,51 @@
+.collapse {
+    margin-top: 1em;
+    width: 88%;
+    justify-content: space-between;
+    .dropdownContainer {
+        width: 46%;
+        margin-bottom: 1.72em;
+        .title {
+            color: white;
+            background-color: #FF6060;
+            padding: 0.7em 1em;
+            margin: auto;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .inactive::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f078";
+        }
+        .active::after {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f077";
+        }
+        .dropdown {
+            margin-top: 2em;
+            background-color: #F6F6F6;
+            border-radius: 5px;
+            color: #FF6060;
+            .listItem {
+                text-align: inherit;
+                width: 97%;
+                margin: 1em auto;
+                font-size: 24px;
+                line-height: 17.11px;
+                ul {
+                    padding: 0 1em;
+                    .itemEquipement {
+                        list-style-type: none;
+                    }
+                }
+            }   
+                  
+        }
+    }
+}

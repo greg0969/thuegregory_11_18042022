@@ -4,6 +4,7 @@ import Logo from "../components/Logo"
 import Nav from "../components/Nav"
 import aboutData from "../components/dataAbout";
 
+
 function About() {
 	return (
 		<div className='about'>
