@@ -13,15 +13,9 @@ function DetailsLogement() {
 
   const { id } = useParams();
 
-  const getData = () => {
-    fetch('../data.json'
-      , {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
-    )
+    
+  useEffect(() => {
+    fetch('../data.json')
       .then(function (response) {
         //console.log(response)
         return response.json();
@@ -32,11 +26,8 @@ function DetailsLogement() {
           logement.id.toString() === id
         ))
       });
-  }
-  useEffect(() => {
-    getData()
 
-  }, [selectedLogement])
+  }, [id])
 
   if (selectedLogement === undefined) {
     return (

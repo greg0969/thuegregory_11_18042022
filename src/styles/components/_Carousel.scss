@@ -13,6 +13,14 @@
     z-index: 1;
     caret-color: transparent;
     display: flex;
+    .numerotation {
+        position: absolute;
+        z-index: 2;
+        color: white;
+        right: 50%;
+        bottom: 0%;
+    }
+
 }
 
 .lisplayFrame::-webkit-scrollbar {

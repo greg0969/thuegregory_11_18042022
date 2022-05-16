@@ -46,7 +46,7 @@ function Carousel( {carouselPics} ) {
                 {carouselPics.length >= 2 && <div className="leftArrow" onClick={prevClickHandler}></div>}
                 <div className="displayFrame">
                     <div className="CarouselItem" ><img src={carouselPics[sliderPosition]} alt=""/></div>
-
+                    <p className="numerotation">{sliderPosition + 1}/{carouselPics.length}</p>
                 </div>
                 {carouselPics.length >= 2 && <div className="rightArrow" onClick={nextClickHandler}></div>}
             </div>
